@@ -1,6 +1,10 @@
 package net.loidbae.fsgpipes;
 
 import com.mojang.logging.LogUtils;
+
+import net.loidbae.fsgpipes.block.ModBlocks;
+import net.loidbae.fsgpipes.item.ModCreativeModeTabs;
+import net.loidbae.fsgpipes.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -34,12 +38,17 @@ import org.slf4j.Logger;
 public class FSGPipes
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "fsg_pipes";
+    public static final String MOD_ID = "fsgpipes";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public FSGPipes(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Registers content of this file, in our case Items.
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -52,7 +61,10 @@ public class FSGPipes
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event){
-
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
+            event.accept(ModItems.WOOD_PIPE);
+            event.accept(ModItems.IRON_PIPE);
+        }
     }
 
     @SubscribeEvent

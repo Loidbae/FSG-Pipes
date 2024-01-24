@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "":{
+            "model": "fsgpipes:block/generic_pipe_block"
+        }
+    }
+}
