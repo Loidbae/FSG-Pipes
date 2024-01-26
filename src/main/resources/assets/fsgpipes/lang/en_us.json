@@ -1,5 +1,8 @@
 {
-    "item.fsgpipes.wood_pipe": "Wood pipe",
-    "item.fsgpipes.iron_pipe": "Iron pipe",
-    "creativetab.fsgpipes_tab": "Finaly Some Good Pipes Tab"
+    "creativetab.fsgpipes_tab": "Finaly Some Good Pipes Tab",
+
+    "item.fsgpipes.wood_pipe": "Wood Pipe",
+    "item.fsgpipes.iron_pipe": "Iron Pipe",
+    
+    "block.fsgpipes.wood_pipe_block": "Wood Pipe Block"
 }

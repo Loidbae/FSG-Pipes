@@ -1,6 +1,0 @@
-{
-    "parent": "mincraft:block/cube_all",
-    "textures":{
-        "all": "fsgpipes:block/wood_pipe_block"
-    }
-}
