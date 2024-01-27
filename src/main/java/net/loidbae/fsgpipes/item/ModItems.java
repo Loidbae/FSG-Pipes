@@ -12,8 +12,7 @@ public class ModItems {
             // Register new items
             DeferredRegister.create(ForgeRegistries.ITEMS, FSGPipes.MOD_ID);
 
-    public static final RegistryObject<Item> WOOD_PIPE = ITEMS.register("wood_pipe", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> IRON_PIPE = ITEMS.register("iron_pipe", () -> new Item(new Item.Properties()));
+    // public static final RegistryObject<Item> WOOD_PIPE = ITEMS.register("wood_pipe", () -> new Item(new Item.Properties()));
 
 
 

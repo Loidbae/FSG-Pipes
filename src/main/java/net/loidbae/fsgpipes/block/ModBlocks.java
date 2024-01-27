@@ -9,6 +9,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlassBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,9 +24,15 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FSGPipes.MOD_ID);
 
 
-    public static final RegistryObject<Block> WOOD_PIPE_BLOCK = registerBlock("wood_pipe_block",
-    ()-> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
+
+    public static final RegistryObject<Block> WOOD_PIPE_BLOCK = registerBlock("wood_pipe_block",
+    ()-> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+
+    public static final RegistryObject<Block> VINE_WOOD_PIPE_BLOCK = registerBlock("vine_wood_pipe_block",
+    ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+
+    
 
     // Helper function
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){

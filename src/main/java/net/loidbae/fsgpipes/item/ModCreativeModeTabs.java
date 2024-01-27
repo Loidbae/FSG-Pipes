@@ -15,13 +15,12 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> FSGPIPES_TAB = CREATIVE_MODE_TABS.register("fsgpipes_tab",
     ()-> CreativeModeTab.builder()
-        .icon(() -> new ItemStack(ModItems.WOOD_PIPE.get()))
+        .icon(() -> new ItemStack(ModBlocks.WOOD_PIPE_BLOCK.get()))
         .title(Component.translatable("creativetab.fsgpipes_tab"))
         .displayItems((pParameters, pOutput) -> {
             // Add mod items to creative tab here
-            pOutput.accept(ModItems.WOOD_PIPE.get());
-            pOutput.accept(ModItems.IRON_PIPE.get());
             pOutput.accept(ModBlocks.WOOD_PIPE_BLOCK.get());
+            pOutput.accept(ModBlocks.VINE_WOOD_PIPE_BLOCK.get());
         })
         .build());
 

@@ -6,6 +6,8 @@ import net.loidbae.fsgpipes.block.ModBlocks;
 import net.loidbae.fsgpipes.item.ModCreativeModeTabs;
 import net.loidbae.fsgpipes.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -62,8 +64,6 @@ public class FSGPipes
 
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
-            event.accept(ModItems.WOOD_PIPE);
-            event.accept(ModItems.IRON_PIPE);
         }
     }
 
@@ -77,7 +77,6 @@ public class FSGPipes
     public static class ClientModEvents{
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
-
         }
     }
 }
