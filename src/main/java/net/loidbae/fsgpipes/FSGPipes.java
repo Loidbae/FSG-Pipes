@@ -1,7 +1,6 @@
 package net.loidbae.fsgpipes;
 
 import com.mojang.logging.LogUtils;
-
 import net.loidbae.fsgpipes.block.ModBlocks;
 import net.loidbae.fsgpipes.item.ModCreativeModeTabs;
 import net.loidbae.fsgpipes.item.ModItems;

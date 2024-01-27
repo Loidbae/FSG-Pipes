@@ -1,5 +1,6 @@
 {
     "creativetab.fsgpipes_tab": "Finaly Some Good Pipes Tab",
 
-    "block.fsgpipes.wood_pipe_block": "Wood Pipe"
+    "block.fsgpipes.wood_pipe_block": "Wooden Pipe",
+    "block.fsgpipes.vine_wood_pipe_block": "Vine Wooden Pipe"
 }

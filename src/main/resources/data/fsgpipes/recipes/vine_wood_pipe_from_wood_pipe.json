@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "fsgpipes:wood_pipe_block"
+      },
+      {
+        "item": "minecraft:vine"
+      },
+      {
+        "item": "minecraft:oxeye_daisy"
+      },
+      {
+        "item": "minecraft:poppy"
+      }
+    ],
+    "result": {
+      "item": "fsgpipes:vine_wood_pipe_block"
+    }
+  }
